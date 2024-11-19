@@ -1,51 +1,27 @@
-import BlogCard from "@/components/BlogCard";
+import CounterCard from "@/components/CounterCard";
 import ServiceCard from "@/components/ServiceCard";
+import TeamCard from "@/components/TeamCard";
 import Image from "next/image";
 
-export default function Home() {
+export default function About() {
   return (
     <>
       <section className="pt-12 md:pt-16 lg:pt-32 pb-6 md:pb-8 lg:pb-16">
         <div className="container mx-auto px-4 md:px-8 xl:px-0">
           <div className="flex justify-between">
-            <div className="w-full max-w-[270px] md:max-w-lg">
+            <div className="w-full max-w-2xl">
               <div className="flex gap-2 ">
                 <span className="h-3.5 md:h-8 min-w-3.5 md:min-w-8 mt-1.5 md:mt-0 bg-black rounded-full" />
                 <div className="font-bold font-black text-3xl md:text-[64px] md:leading-none">
-                  BRAND RECOGNITION
-                </div>
-              </div>
-              <div className="flex gap-6 md:gap-8 items-center mt-4 md:mt-8">
-                <div className="text-black font-medium text-sm">
-                  PHOTOGRAPHY
-                </div>
-                <div className="h-px w-20 md:w-48 bg-black" />
-                <div className="h-6 md:h-8 w-6 md:w-8 rounded-full border border-black flex justify-center items-center">
-                  <Image
-                    src="/img/right_arrow.png"
-                    alt="right arrow icon"
-                    width={16}
-                    height={16}
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="hidden lg:block relative w-[460px] h-[196px]">
-              <div className="text-black font-medium opacity-5 text-[196px] leading-none">
-                2021
-              </div>
-              <div className="absolute right-0 bottom-6">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-black rounded-full" />
-                  <div className="text-black font-medium text-2xl">NEXT</div>
+                  CRAFTING DIGITAL EXPERIENCE
                 </div>
               </div>
             </div>
           </div>
           <div className="pt-8 md:pt-16">
             <Image
-              src="/img/hero.png"
-              alt="Hero Image"
+              src="/img/men-with-camera.png"
+              alt="A mem clicking picture with Black DSLR Camera"
               width={1356}
               height={522}
               className="h-[240px] md:h-[522px] object-cover object-center"
@@ -58,13 +34,9 @@ export default function Home() {
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-2 md:gap-4">
               <div className="w-3.5 md:w-4 h-3.5 md:h-4 rounded-full bg-black"></div>
-              <div className="text-black text-2xl md:text-3xl font-semibold">
-                ABOUT
-              </div>
+              <div className="text-black text-2xl md:text-3xl font-semibold">ABOUT</div>
             </div>
-            <div className="text-black text-2xl md:text-3xl font-semibold">
-              (1.1)
-            </div>
+            <div className="text-black text-2xl md:text-3xl font-semibold">(1.1)</div>
           </div>
           <div className="flex flex-col lg:flex-row justify-between gap-4 md:gap-8 lg:gap-32 mt-8 md:mt-16">
             <div>
@@ -161,13 +133,19 @@ export default function Home() {
         </div>
       </section>
       <section className="py-6 md:py-8 lg:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4">
+          <CounterCard varient="light" number={200} title="VISUALISATION" />
+          <CounterCard varient="black" number={7} title="YEARS EXPERIENCE" />
+          <CounterCard varient="light" number={32} title="AWWARDS" />
+          <CounterCard varient="black" number={16} title="PHOTOGRAPHERS" />
+        </div>
+      </section>
+      <section className="py-6 md:py-8 lg:py-16">
         <div className="container mx-auto px-4 md:px-8 xl:px-0">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-4">
               <div className="w-3.5 md:w-4 h-3.5 md:h-4 rounded-full bg-black"></div>
-              <div className="text-black text-2xl md:text-3xl font-semibold">
-                SERVICES
-              </div>
+              <div className="text-black text-2xl md:text-3xl font-semibold">SERVICES</div>
             </div>
             <div className="flex items-center gap-2 md:gap-6">
               <div className="flex items-center gap-1 md:gap-4">
@@ -182,9 +160,7 @@ export default function Home() {
                   className="w-3 h-3 md:w-[14px] md:h-[14px]"
                 />
               </div>
-              <div className="text-black text-2xl md:text-3xl font-semibold">
-                (1.2)
-              </div>
+              <div className="text-black text-2xl md:text-3xl font-semibold">(1.2)</div>
             </div>
           </div>
           <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-6 pt-8 md:pt-12">
@@ -241,47 +217,17 @@ export default function Home() {
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-1 md:gap-4">
               <div className="w-3.5 md:w-4 h-3.5 md:h-4 rounded-full bg-black"></div>
-              <div className="text-black text-2xl md:text-3xl font-semibold">
-                FEATURE NEWS
-              </div>
+              <div className="text-black text-2xl md:text-3xl font-semibold">TEAM</div>
             </div>
-            <div className="text-black text-2xl md:text-3xl font-semibold">
-              (1.3)
-            </div>
+            <div className="text-black text-2xl md:text-3xl font-semibold">(1.3)</div>
           </div>
-          <div className="flex flex-col md:flex-row gap-8 md:gap-6 justify-between pt-8 md:pt-12">
-            <BlogCard
-              img="/img/service1.png"
-              imgAlt="feature image 1"
-              cat="PRESS"
-              pubDate="11.02.2022"
-              title="HOW TO BE AN EXPERD IN YOUR FIELD"
-            />
-            <BlogCard
-              img="/img/service2.png"
-              imgAlt="feature image 2"
-              cat="PRESS"
-              pubDate="11.02.2022"
-              title="HOW TO BE AN EXPERD IN YOUR FIELD"
-            />
-            <BlogCard
-              img="/img/service3.png"
-              imgAlt="feature image 3"
-              cat="PRESS"
-              pubDate="11.02.2022"
-              title="HOW TO BE AN EXPERD IN YOUR FIELD"
-            />
-          </div>
-          <div className="mt-8 md:mt-16">
-            <div className="h-10 w-10 md:h-16 md:w-16 border border-black rounded-full flex justify-center items-center">
-              <Image
-                src="/img/arrow-large.png"
-                alt="large arrow right icon"
-                width={32}
-                height={32}
-                className="w-6 h-6 md:w-8 md:h-8"
-              />
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-8 md:gap-y-12 pt-8 md:pt-12">
+            <TeamCard img="/img/team1.png" imgAlt="Team Member Image 1" name="John Doe" />
+            <TeamCard img="/img/team2.png" imgAlt="Team Member Image 2" name="John Doe" />
+            <TeamCard img="/img/team3.png" imgAlt="Team Member Image 3" name="John Doe" />
+            <TeamCard img="/img/team4.png" imgAlt="Team Member Image 4" name="John Doe" />
+            <TeamCard img="/img/team5.png" imgAlt="Team Member Image 5" name="John Doe" />
+            <TeamCard img="/img/team6.png" imgAlt="Team Member Image 6" name="John Doe" />
           </div>
         </div>
       </section>
